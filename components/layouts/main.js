@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../Navbar/navbar'
 import { Box, Container, Show } from '@chakra-ui/react'
 import { App as Footer}  from '../Footer/App'
-import { App as Hero } from '../Hero/App'
+import { App as Hero } from '../Hero/app'
 
 const Main = ({children, router}) => {
     return (
@@ -15,7 +15,7 @@ const Main = ({children, router}) => {
             <NavBar path={router.asPath}></NavBar>
             <Hero></Hero>
 
-            <Container  maxW="container.lg" pt={14}>
+            <Container  maxW="70vw" pt={14}>
                 {children}
             </Container>
 

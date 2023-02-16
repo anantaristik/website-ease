@@ -62,10 +62,10 @@ export const App = () => {
                 />
                 <Stack
                   pos="absolute"
-                  ml="15vh"
-                  bottom="30vh"
+                  ml="15vw"
+                  bottom="35vh"
                   textAlign="left"
-                  w="full"
+                  w="70vw"
                   mb="8"
                   color="white"
                 >
