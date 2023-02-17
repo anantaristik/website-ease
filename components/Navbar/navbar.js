@@ -68,9 +68,9 @@ const NavBar = props => {
                                 Services {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
                             </MenuButton>
                             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
-                                <MenuItem>Creative</MenuItem>
-                                <MenuItem>Studio</MenuItem>
-                                <MenuItem>Zoom</MenuItem>
+                                <MenuItem><Link href='/services/creative'>Creative</Link></MenuItem>
+                                <MenuItem><Link href='/services/studio'>Studio</Link></MenuItem>
+                                <MenuItem><Link href='/services/zoom'>Zoom</Link></MenuItem>
                             </MenuList>
                         </Menu>
                         <LinkItem href='/about' path={path}>Projects</LinkItem>
@@ -99,9 +99,9 @@ const NavBar = props => {
                                     Services {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
                                 </MenuButton>
                                 <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
-                                    <MenuItem>Creative</MenuItem>
-                                    <MenuItem>Studio</MenuItem>
-                                    <MenuItem>Zoom</MenuItem>
+                                    <MenuItem><Link href='/services/creative'>Creative</Link></MenuItem>
+                                    <MenuItem><Link href='/services/studio'>Studio</Link></MenuItem>
+                                    <MenuItem><Link href='/services/zoom'>Zoom</Link></MenuItem>
                                 </MenuList>
                             </Menu>
                             <MenuItem><Link href='/about'>Projects</Link></MenuItem>

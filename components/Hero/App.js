@@ -8,9 +8,9 @@ import {
     Stack
  } from "@chakra-ui/react";
 import { arrowStyles } from "./arrowStyles";
-import { slides } from "./_data";
 
-export const App = () => {
+export const App = (props) => {
+    const slides = props.slides
     const [currentSlide, setCurrentSlide] = useState(0);
     const slidesCount = slides.length;
   

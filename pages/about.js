@@ -3,9 +3,10 @@ import { App as Logos } from "@/components/logos/app"
 import { App as Services } from "@/components/services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
-import { slides } from "@/components/Hero/slides/_dataHome"
+import { slides } from "@/components/Hero/slides/_dataAbout"
+import { App as Teams } from "@/components/teams/App"
 
-export default function Home() {
+export default function About() {
   return (
     <Box>
       <Hero slides={slides}></Hero>
@@ -41,7 +42,7 @@ export default function Home() {
 
           {/* Logos Grid */}
           <Box>
-            <Logos></Logos>
+            <Teams></Teams>
           </Box>
           <Divider mb={65} ></Divider>
 
