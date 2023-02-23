@@ -5,7 +5,7 @@ import { PricingCard } from './pricingCard'
 
 export const App = () => {
   return (
-    <Box as="section" bg={mode('gray.50', 'gray.800')} py="20">
+    <Box as="section" py="20">
       <Box
         maxW={{
           base: 'xl',
@@ -25,7 +25,7 @@ export const App = () => {
             sm: 'center',
           }}
         >
-          Pricing Plans
+          Pricing
         </Heading>
         <Text
           mt="4"
@@ -37,8 +37,7 @@ export const App = () => {
             sm: 'center',
           }}
         >
-          Start building for free, then add a site plan to go live. Account plans unlock additional
-          features.
+          Ayooo kita aksndasidjwiaksdmk asidaoskdoako asodkasodk askdoksaok
         </Text>
         <SimpleGrid
           alignItems="flex-start"
@@ -56,9 +55,9 @@ export const App = () => {
           }}
         >
           <PricingCard
-            name="Job Board"
+            name="Biasa"
             description="Job board for hiring designers and creative professionals."
-            price={149}
+            price={2000000}
             features={[
               'Sapiente libero doloribus modi',
               'Vel ipsa esse repudiandae',
@@ -67,9 +66,9 @@ export const App = () => {
           />
           <PricingCard
             popular
-            name="Designer Search"
+            name="SUPEERRR"
             description="Our premium search allows you to quickly find the perfect designer."
-            price={299}
+            price={2000000}
             features={[
               'Duis aute irure dolor repreht',
               'Excepteur sint occa cupidatat',
@@ -78,9 +77,9 @@ export const App = () => {
             ]}
           />
           <PricingCard
-            name="Mega Pro"
+            name="MEGAAA"
             description="Combine the power of search with the job board at a discounted rate."
-            price={499}
+            price={2000000}
             features={[
               'Duis aute irure dolor',
               'Excepteur sint occaecat',

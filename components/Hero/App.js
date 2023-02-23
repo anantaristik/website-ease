@@ -30,6 +30,22 @@ export const App = (props) => {
       transition: "all .5s",
       ml: `-${currentSlide * 100}%`,
     };
+
+    let arrow;
+    if (slidesCount == 1) {
+      arrow = <Box></Box>
+    }
+    else {
+      arrow = 
+      <Box>
+        <Text {...arrowStyles} left="0" onClick={prevSlide}>
+            &#10094;
+        </Text>
+        <Text {...arrowStyles} right="0" onClick={nextSlide}>
+            &#10095;
+        </Text>
+      </Box>
+    }
     return (
       <Flex
         w="full"
@@ -75,12 +91,7 @@ export const App = (props) => {
               </Box>
             ))}
           </Flex>
-          <Text {...arrowStyles} left="0" onClick={prevSlide}>
-                &#10094;
-            </Text>
-            <Text {...arrowStyles} right="0" onClick={nextSlide}>
-                &#10095;
-            </Text>
+          {arrow}
           <HStack justify="left" pos="absolute" bottom={10} left={20} w="full">
             {Array.from({
               length: slidesCount,

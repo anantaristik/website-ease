@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import NavBar from '../Navbar/navbar'
+import NavBar from '../navbar/navbar'
 import { Box, Container, Show } from '@chakra-ui/react'
 import { App as Footer}  from '../Footer/App'
 import { App as Hero } from '../Hero/app'

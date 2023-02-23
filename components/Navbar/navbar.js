@@ -37,8 +37,8 @@ const NavBar = props => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
-        <Box position='fixed' as="nav" w='100%' bg={useColorModeValue('#ffffff40', '#20202380')}
-        style={{backdropFilter: 'blur(10px)'}} zIndex={1} {...props} mt='md'>
+        <Box position='fixed' as="nav" w='100%' bg={useColorModeValue('#ffffff40', '#20202380') }
+        style={{backdropFilter: 'blur(10px)'}} zIndex={1} {...props} mt='md' color='gray.300'>
             <Container display='flex' p={2} maxW="container.lg" wrap='wrap' justify='space-between'>
                 <Flex align='center' mr={5}>
                     <Logo></Logo>

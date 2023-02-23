@@ -26,6 +26,18 @@ const PricingDetail = (props) => {
   )
 }
 
+function addSeperator(nStr) {
+  nStr += '';
+  var x = nStr.split('.');
+  var x1 = x[0];
+  var x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+      x1 = x1.replace(rgx, '$1' + '.' + '$2');
+  }
+  return x1 + x2;
+}
+
 const PopularBadge = (props) => (
   <Box
     whiteSpace="nowrap"
@@ -49,11 +61,11 @@ const PriceDisplay = (props) => {
   const { currency, price } = props
   return (
     <Flex w="100%" align="center" justify="center" my="5" fontWeight="extrabold">
-      <Text fontSize="4xl" mr="2">
+      <Text fontSize="2xl" mr="2">
         {currency}
       </Text>
-      <Text fontSize="72px" lineHeight="1" letterSpacing="tight">
-        {price}
+      <Text fontSize="40px" lineHeight="1" letterSpacing="tight">
+        {addSeperator(price)}
       </Text>
     </Flex>
   )
@@ -104,7 +116,7 @@ export const PricingCard = (props) => {
         <Text align="center" mt="2" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
           {description}
         </Text>
-        <PriceDisplay currency="$" price={price} />
+        <PriceDisplay currency="Rp" price={price} />
       </Flex>
 
       <List stylePosition="outside" mt="8" spacing={4}>
