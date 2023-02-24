@@ -1,9 +1,9 @@
 import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui/react"
-import { App as Logos } from "@/components/logos/app"
-import { App as Services } from "@/components/services/app"
+import { App as Logos } from "@/components/Logos/app"
+import { App as Services } from "@/components/Services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
-import { app as VideoProfile } from "@/components/video_profile/app"
+import { app as VideoProfile } from "@/components/Video_profile/app"
 import { slides } from "@/components/Hero/slides/_dataHome"
 
 export default function Home() {

@@ -2,7 +2,7 @@ import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataStudio"
-import { App as Pricing } from "@/components/pricing/app"
+import { App as Pricing } from "@/components/Pricing/app"
 import { App as Terms } from "@/components/Terms/App"
 import { app as FAQ } from "@/components/FAQ/app"
 
