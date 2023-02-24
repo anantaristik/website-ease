@@ -4,6 +4,7 @@ import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataCreative"
 import { App as Pricing } from "@/components/pricing/app"
 import { App as Terms } from "@/components/Terms/App"
+import { app as FAQ } from "@/components/FAQ/app"
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
           {/* Terms of Service */}
           <Box>
             <Terms></Terms>
+          </Box>
+
+          {/* Frequently Asked Questions */}
+          <Box>
+            <FAQ></FAQ>
           </Box>
           <Box height='50vh'></Box>
         </Box>
