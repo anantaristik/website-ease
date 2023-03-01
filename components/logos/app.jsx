@@ -1,8 +1,35 @@
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import * as React from 'react'
 import * as Logos from './brands'
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export const App = () => {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+  
   return (
     <Box color="white" as="section" pt="16" pb="24">
       <Box
@@ -41,12 +68,24 @@ export const App = () => {
           fontSize="2xl"
           opacity={0.6}
         >
-          <Logos.ChatMonkey />
-          <Logos.Wakanda />
-          <Logos.Lighthouse />
-          <Logos.Plumtic />
-          <Logos.WorkScout />
         </SimpleGrid>
+        <Slider {...settings}>
+        <div>
+          <Logos.ChatMonkey />
+        </div>
+        <div>
+          <Logos.Wakanda />
+        </div>
+        <div>
+          <Logos.Lighthouse />
+        </div>
+        <div>
+          <Logos.WorkScout />
+        </div>
+        <div>
+          <Logos.Plumtic />
+        </div>
+      </Slider>
       </Box>
     </Box>
   )

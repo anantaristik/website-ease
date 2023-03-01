@@ -19,7 +19,6 @@ export default function Home() {
             <Logos></Logos>
           </Box>
           <Divider mb={65} ></Divider>
-
           {/* Our Services */}
           <Box>
             <Services></Services>
