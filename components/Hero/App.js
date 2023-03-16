@@ -5,7 +5,9 @@ import {
     Text,
     Image,
     HStack,
-    Stack
+    Stack,
+    Button,
+    VStack
  } from "@chakra-ui/react";
 import { arrowStyles } from "./arrowStyles";
 
@@ -78,15 +80,22 @@ export const App = (props) => {
                 />
                 <Stack
                   pos="absolute"
-                  ml="15vw"
-                  bottom="35vh"
+                  ml="12vw"
+                  bottom="25vh"
                   textAlign="left"
                   w="70vw"
                   mb="8"
                   color="white"
+                  spacing={0}
                 >
-                  <Text fontSize="6xl" fontWeight="extrabold">{slide.label}</Text>
-                  <Text fontSize="lg">{slide.description}</Text>
+                  <Text fontSize="6vw" fontWeight="extrabold" as='u'>{slide.label}</Text>
+                  <HStack spacing='2vw'>
+                    <VStack align='left' spacing={0}>
+                      <Text fontSize="xl" >{slide.subheading1}</Text>
+                      <Text fontSize="xl" >{slide.subheading2}</Text>
+                    </VStack>
+                    <Button>Learn More...</Button>
+                  </HStack>
                 </Stack>
               </Box>
             ))}

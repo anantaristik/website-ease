@@ -1,6 +1,6 @@
 import { Box, Divider, Heading, SimpleGrid, Text, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
-import { Member } from './Member'
+import { Member } from './member'
 import { members } from './_data'
 
 export const App = () => {

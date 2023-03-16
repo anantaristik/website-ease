@@ -5,6 +5,7 @@ import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { app as VideoProfile } from "@/components/Video_profile/app"
 import { slides } from "@/components/Hero/slides/_dataHome"
+import { slides_pro } from "@/components/Projects/_data"
 
 export default function Home() {
   return (
@@ -12,13 +13,9 @@ export default function Home() {
       <Hero slides={slides}></Hero>
       {/* Video Profile */}
       <VideoProfile></VideoProfile>
+      <Logos></Logos>
       <Container maxW='70vw' >
         <Box mt={30} width='70vw'>
-          {/* Logos Grid */}
-          <Box>
-            <Logos></Logos>
-          </Box>
-          <Divider mb={65} ></Divider>
           {/* Our Services */}
           <Box>
             <Services></Services>
@@ -27,9 +24,9 @@ export default function Home() {
 
           {/* Recent Projects */}
           <Box>
-            <Projects></Projects>
+            <Projects slides={slides_pro}></Projects>
           </Box>
-          <Box height='50vh'></Box>
+          <Box height='15vh'></Box>
         </Box>
       </Container>
     </Box>

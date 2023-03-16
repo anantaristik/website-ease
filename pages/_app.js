@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import Layout from '../components/layouts/main'
+import Layout from '../components/Layouts/main'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../lib/theme'
 import Fonts from '../components/fonts'

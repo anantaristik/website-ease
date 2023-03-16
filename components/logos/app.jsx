@@ -45,12 +45,8 @@ export const App = () => {
       >
         <Box textAlign="center">
           <Heading size="lg" mb="4">
-            Trusted by enterprise leaders
+            We Have Worked With
           </Heading>
-          <Text maxW="2xl" mx="auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua elit consectetur adipiscing.
-          </Text>
         </Box>
         <SimpleGrid
           columns={{

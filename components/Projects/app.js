@@ -9,13 +9,18 @@ import {
     Skeleton,
     Stack,
     useColorModeValue,
-    Button
+    Button,
+    Text
   } from '@chakra-ui/react'
-  import { FaArrowRight } from 'react-icons/fa'
   import { useState } from 'react';
-  import { slides } from "./_data";
+  import Slider from "react-slick"
+  import 'slick-carousel/slick/slick.css';
+  import 'slick-carousel/slick/slick-theme.css';
+
+
   
-  export const App = () => {
+  export const App = (props) => {
+    const slides = props.slides
     const [currentSlide, setCurrentSlide] = useState(0);
     const slidesCount = slides.length;
 
@@ -36,87 +41,52 @@ import {
         ml: `-${currentSlide * 100}%`,
     };
 
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+
     return (
-        <Box
-      maxW="7xl"
-      mx="auto"
-      px={{
-        base: '0',
-        lg: '12',
-      }}
-      py={{
-        base: '0',
-        lg: '12',
-      }}
-    >
-      <Stack
-        direction={{
-          base: 'column-reverse',
-          lg: 'row',
-        }}
-        spacing={{
-          base: '0',
-          lg: '20',
-        }}
-      >
-        <Box
-          width={{
-            lg: 'sm',
-          }}
-          transform={{
-            base: 'translateY(-50%)',
-            lg: 'none',
-          }}
-          bg={{
-            base: useColorModeValue('red.50', 'gray.700'),
-            lg: 'transparent',
-          }}
-          mx={{
-            base: '6',
-            md: '8',
-            lg: '0',
-          }}
-          px={{
-            base: '6',
-            md: '8',
-            lg: '0',
-          }}
-          py={{
-            base: '6',
-            md: '8',
-            lg: '12',
-          }}
-        >
-          <Stack
-            spacing={{
-              base: '8',
-              lg: '10',
-            }}
-          >
-            <Stack
-              spacing={{
-                base: '2',
-                lg: '4',
-              }}
-            >
-              <Heading size="xl" color={useColorModeValue('red.500', 'red.300')}>
-                Misguided
-              </Heading>
-              <Heading size="xl" fontWeight="normal">
-                Refresh your wardrobe
-              </Heading>
-              <Button onClick={prevSlide}>Prev</Button>
-              <Button onClick={nextSlide}>Next</Button>
-            </Stack>
-            <HStack spacing="3">
-              <Link color={useColorModeValue('red.500', 'red.300')} fontWeight="bold" fontSize="lg">
-                Discover now
-              </Link>
-              <Icon color={useColorModeValue('red.500', 'red.300')} as={FaArrowRight} />
-            </HStack>
-          </Stack>
-        </Box>
-      </Stack>
-    </Box>
+      <Box>
+        <HStack>
+          <Box maxW="20vw">
+            <Text fontSize='4xl' fontWeight='extrabold' noOfLines={2}>Recent</Text>
+            <Text fontSize='4xl' fontWeight='extrabold'>Projects</Text>
+            <Box h={10}></Box>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra diam quis dolor tincidunt, congue tempor urna fringilla. Maecenas tincidunt fringilla dictum. Donec commodo sed ipsum sit amet hendrerit. Phasellus mi ante, pulvinar in vestibulum nec, congue at neque.
+            </Text>
+          </Box>
+          <Box w='5vw'></Box>
+          <Box w="40vw">
+            <Box mt='5vh'>
+              <Slider>
+                {slides.map((slide, sid) => (
+                  <Image src={slide.img} objectFit='cover'></Image>
+                ))}
+              </Slider>
+            </Box>
+          </Box>
+        </HStack>
+      </Box>
     )
   }

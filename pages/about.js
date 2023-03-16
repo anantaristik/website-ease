@@ -3,6 +3,7 @@ import { App as Services } from "@/components/Services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataAbout"
+import { slides_pro } from "@/components/Projects/_data"
 import { app as VideoProfile} from "@/components/Video_profile/app"
 import { app as VisionMission } from "@/components/Misvis/app"
 import { App as Logos } from "@/components/Logos/app"
@@ -23,7 +24,7 @@ export default function About() {
 
           {/* Recent Projects */}
           <Box>
-            <Projects></Projects>
+            <Projects slides={slides_pro}></Projects>
           </Box>
 
           {/* We Have Worked With */}

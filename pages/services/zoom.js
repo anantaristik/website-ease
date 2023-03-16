@@ -2,6 +2,7 @@ import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataZoom"
+import { slides_pro } from "@/components/Projects/_data"
 import { App as Pricing } from "@/components/Pricing/app"
 import { App as Terms } from "@/components/Terms/App"
 import { app as FAQ } from "@/components/FAQ/app"
@@ -14,7 +15,7 @@ export default function Home() {
         <Box mt={50} width='70vw'>
           {/* Recent Projects */}
           <Box>
-            <Projects></Projects>
+            <Projects slides={slides_pro}></Projects>
           </Box>
 
           {/* Pricing */}
