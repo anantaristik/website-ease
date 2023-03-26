@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   createIcon,
   Flex,
   List,
@@ -65,9 +64,9 @@ const ServicesWrapper = (props) => {
       maxW="md"
       mx="auto"
       bg={mode('white', 'gray.700')}
-      px="10"
-      pt="8"
-      pb="8"
+      px="20"
+      pt="10"
+      pb="10"
       rounded="lg"
       shadow="base"
       position="relative"
@@ -80,16 +79,17 @@ const ServicesWrapper = (props) => {
 export const ServicesCard = (props) => {
   const { onClick, features, name, description, price, popular, ...rest } = props
   return (
+  
     <ServicesWrapper 
-        highlight={popular} {...rest}>
-        
+      highlight={popular} {...rest}>
+
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 
       <Flex direction="column" justify="center">
-        <Text align="center" fontSize="2xl" fontWeight="bold">
+        <Text align="center" fontSize="3xl" fontWeight="bold">
           {name}
         </Text>
-        <Text align="center" mt="2" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
+        <Text align="center" mt="4" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
           {description}
         </Text>
       </Flex>
@@ -100,17 +100,7 @@ export const ServicesCard = (props) => {
         ))}
       </List>
 
-      <Button
-        minH="3.5rem"
-        rounded="lg"
-        fontWeight="bold"
-        colorScheme={popular ? 'blue' : 'gray'}
-        mt="8"
-        w="100%"
-        onClick={onClick}
-      >
-        Pelajari
-      </Button>
     </ServicesWrapper>
+
   )
 }

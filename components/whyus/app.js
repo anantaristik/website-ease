@@ -1,33 +1,23 @@
-import { Box, Heading, SimpleGrid, Text, useColorModeValue as mode } from '@chakra-ui/react'
-import * as React from 'react'
-import { DurationSwitcher } from './durationSwitcher'
+import React from "react"
+import { Box, Heading, SimpleGrid, Text, useColorModeValue as mode } from "@chakra-ui/react"
+import ReactCardCarousel from "react-card-carousel"
 import { ServicesCard } from './servicesCard'
 
-export const App = () => {
+function CONTAINER_STYLE() {
+  return {
+    position: "relative",
+    height: "60vh",
+    width: "100%",
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+}
+
+export const app = () => {
   return (
-    <Box as="section" py="20">
-      <Box
-            position="absolute"
-            left="0"
-            top="50%"
-            transform="translateY(-50%)"
-            width={{ base: '50px', md: '300px' }}
-            height="5px"
-            backgroundColor="#DAC17E"
-            content=""
-            display="inline-block"
-          />
-          <Box
-            position="absolute"
-            right="0"
-            top="50%"
-            transform="translateY(-50%)"
-            width={{ base: '50px', md: '300px' }}
-            height="5px"
-            backgroundColor="#DAC17E"
-            content=""
-            display="inline-block"
-          />
+    <Box as="section" py="10">
       <Box
         maxW={{
           base: 'xl',
@@ -46,10 +36,8 @@ export const App = () => {
           textAlign={{
             sm: 'center',
           }}
-          color="#DAC17E"
-          
         >
-          Our Services
+          Why Us
         </Heading>
         <Text
           mt="4"
@@ -63,21 +51,13 @@ export const App = () => {
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula enim a nulla gravida, in vehicula lacus placerat. 
         </Text>
-        <SimpleGrid
-          alignItems="flex-start"
-          mt={{
-            base: '10',
-            lg: '24',
-          }}
-          columns={{
-            base: 1,
-            lg: 3,
-          }}
-          spacing={{
-            base: '12',
-            lg: '8',
-          }}
-        >
+      
+        <Box style={CONTAINER_STYLE()}>
+          <ReactCardCarousel 
+            autoplay={true} 
+            autoplay_speed={2500}
+            cardPadSize={1000}
+            margin={50}>
           <ServicesCard
             name="Creative"
             description="Deskripsi untuk Creative"
@@ -108,8 +88,11 @@ export const App = () => {
               'Vel ipsa esse repudiandae',
             ]}
           />
-        </SimpleGrid>
-      </Box>
-    </Box>
+          </ReactCardCarousel>
+          </Box>
+          </Box>
+        </Box>
+
   )
 }
+
