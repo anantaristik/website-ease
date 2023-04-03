@@ -10,11 +10,12 @@ import { App as Logos } from "@/components/Logos/app"
 
 export default function About() {
   return (
-    <Box>
+    <Box color='black' background='white'>
       <Hero slides={slides}></Hero>
       {/* Video Profile */}
       <VideoProfile type='about'></VideoProfile>
-      <Container maxW='70vw' >
+
+      <Container maxW='70vw'>
         <Box mt={50} width='70vw'>
           {/* Mission and Vision */}
           <Box>

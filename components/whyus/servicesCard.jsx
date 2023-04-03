@@ -77,11 +77,10 @@ const ServicesWrapper = (props) => {
 }
 
 export const ServicesCard = (props) => {
-  const { onClick, features, name, description, price, popular, ...rest } = props
+  const { scale = 1, onClick, features, name, description, price, popular, ...rest } = props
   return (
   
-    <ServicesWrapper 
-      highlight={popular} {...rest}>
+    <ServicesWrapper highlight={popular} {...rest} style={{ transform: `scale(${scale})` }}>
 
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 

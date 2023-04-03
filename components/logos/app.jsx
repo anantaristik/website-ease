@@ -29,6 +29,7 @@ export const App = () => {
 
   const sliderSettings = {
     dots: true,
+    dotsClass: "slick-dots slick-thumb",
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -40,8 +41,9 @@ export const App = () => {
     },
   }
 
+  
   return (
-    <Box bg="white" as="section" pt="16" pb="24">
+    <Box bg="#F2F2F2" as="section" pt="16" pb="24">
       <Box
         maxW={{
           base: 'xl',

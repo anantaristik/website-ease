@@ -4,9 +4,11 @@ import { App as Services } from "@/components/Services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
 import { app as VideoProfile } from "@/components/Video_profile/app"
-import { app as Whyus } from "@/components/whyus/app"
+import { App as Whyus } from "@/components/whyus/app"
 import { slides } from "@/components/Hero/slides/_dataHome"
 import { slides_pro } from "@/components/Projects/_data"
+import { FaWhatsapp } from "react-icons/fa";
+import styles from "../styles/whatsapp.module.css"
 
 export default function Home() {
   return (
@@ -30,6 +32,24 @@ export default function Home() {
           <Box>
             <Projects slides={slides_pro}></Projects>
           </Box>
+          {/* Floating WhatsApp icon */}
+          <Box
+              position="fixed"
+              bottom={10}
+              right={10}
+              bg="#25d366"
+              borderRadius="50%"
+              padding={4}
+              className={styles.Box}
+            >
+              <a
+                href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp color="#fff" size={30} />
+              </a>
+            </Box>
           <Box height='15vh'></Box>
         </Box>
       </Container>

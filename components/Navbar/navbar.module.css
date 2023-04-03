@@ -1,0 +1,133 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  z-index: 1000;
+}
+
+.logoText {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin-left: 20px;
+}
+
+.navList li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+}
+
+.menuButton.openToFront {
+  z-index: 1001;
+}
+
+.menuButton span {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+}
+
+.menuButton.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menuButton.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .navList {
+    flex-direction: column;
+  }
+
+  .navList li {
+    margin-bottom: 20px;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .logo {
+    display: none;
+  }
+}

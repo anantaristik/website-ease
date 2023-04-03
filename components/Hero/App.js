@@ -77,6 +77,7 @@ export const App = (props) => {
                   alt="carousel image"
                   boxSize="full"
                   backgroundSize="cover"
+                  objectFit="cover"
                 />
                 <Stack
                   pos="absolute"

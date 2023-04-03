@@ -7,28 +7,6 @@ export const App = () => {
   return (
     <Box as="section" py="20">
       <Box
-            position="absolute"
-            left="0"
-            top="50%"
-            transform="translateY(-50%)"
-            width={{ base: '50px', md: '300px' }}
-            height="5px"
-            backgroundColor="#DAC17E"
-            content=""
-            display="inline-block"
-          />
-          <Box
-            position="absolute"
-            right="0"
-            top="50%"
-            transform="translateY(-50%)"
-            width={{ base: '50px', md: '300px' }}
-            height="5px"
-            backgroundColor="#DAC17E"
-            content=""
-            display="inline-block"
-          />
-      <Box
         maxW={{
           base: 'xl',
           md: '7xl',
