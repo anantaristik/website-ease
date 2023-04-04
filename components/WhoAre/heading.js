@@ -4,9 +4,7 @@ export const HeadingVidprof = (params) => {
     const type = params.type
     if(type == 'about'){
         return (
-            <Center>
-                <Heading size='2xl'>Our Company Profile</Heading>
-            </Center>
+            <Heading alignItems={'left'} fontFamily={'Montserrat'} fontWeight={'extrabold'} size='2xl'>Who are we?</Heading>
         )
     }
     else {

@@ -3,8 +3,8 @@ import { HeadingVidprof } from "./heading"
 
 export const app = (params) => {
     return(
-        <Box backgroundSize={"cover"} backgroundImage='img/yellow.png'>
-            <Container maxW='70vw' color='black' pt={70} pb={70}>
+        <Box backgroundSize={"cover"} backgroundImage='img/blackcreative.png'>
+            <Container maxW='70vw' color='#f2f2f2' pt={70} pb={70}>
                 <HeadingVidprof type={params.type}></HeadingVidprof>
                 <Center>
                 <Box

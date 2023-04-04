@@ -1,39 +1,73 @@
-import { Container, Box, Heading, Show, Text, Center, Divider } from "@chakra-ui/react"
-import { App as Services } from "@/components/Services/app"
-import { App as Projects } from "@/components/Projects/app"
+import React from 'react';
+import { Box, Container } from "@chakra-ui/react"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataAbout"
-import { slides_pro } from "@/components/Projects/_data"
 import { app as VideoProfile} from "@/components/Video_profile/app"
-import { app as VisionMission } from "@/components/Misvis/app"
-import { App as Logos } from "@/components/Logos/app"
+import { app as Abouts } from "@/components/About/app"
+import { app as WhoAre } from "@/components/WhoAre/app"
+import { app as WhatWe } from "@/components/WhatWe/app"
+import { App as History } from "@/components/History/app"
+import { App as OurValues } from "@/components/OurValues/app"
+import { app as Misvis} from "@/components/misvis/app"
+import { App as Teams } from "@/components/teams/app"
 
 export default function About() {
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+
+  const handleScroll = () => {
+    const currentPosition = window.pageYOffset;
+    setScrollPosition(currentPosition <= 0 ? 0 : currentPosition);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarHeight = 1;
+  const heroHeight = 600;
+
   return (
-    <Box color='black' background='white'>
-      <Hero slides={slides}></Hero>
-      {/* Video Profile */}
-      <VideoProfile type='about'></VideoProfile>
+    <Box position="relative" color="black" background="#f2f2f2" minHeight="100vh">
+      <Box position="fixed" top={0} left={0} right={0} height={navbarHeight} zIndex={10} background="#ffffff">
+        {/* Add Navbar component here */}
+      </Box>
+      <Box position="fixed" top={navbarHeight} left={0} right={0} height={heroHeight} opacity={1 - scrollPosition / heroHeight} zIndex={0}>
+        <Hero slides={slides}></Hero>
+      </Box>
+      <Box mt={heroHeight - navbarHeight} width="100%">
+        {/* About Us */}
+        <Abouts></Abouts>
 
-      <Container maxW='70vw'>
-        <Box mt={50} width='70vw'>
-          {/* Mission and Vision */}
-          <Box>
-            <VisionMission></VisionMission>
-          </Box>
-          <Divider mt={60}></Divider>
+        {/* Video Profile */}
+        <VideoProfile type="about"></VideoProfile>
 
-          {/* Recent Projects */}
-          <Box>
-            <Projects slides={slides_pro}></Projects>
-          </Box>
+        {/* Who Are We? */}
+        <WhoAre type="about"></WhoAre>
 
-          {/* We Have Worked With */}
-          <Box>
-            <Logos></Logos>
+        {/* What We Do? */}
+        <WhatWe></WhatWe>
+
+        {/* Our History */}
+        <History></History>
+
+        {/* Our Values */}
+        <OurValues></OurValues>
+
+        <Container maxW='70vw' pb='9vh'>
+          <Box mt={50} width='70vw'>
+            {/* Mission and Vision */}
+            <Box>
+            <Misvis></Misvis>
+            </Box>
           </Box>
-        </Box>
-      </Container>
+        </Container>
+        <Teams></Teams>
+        
+
+      </Box>
     </Box>
-  )
+  );
 }

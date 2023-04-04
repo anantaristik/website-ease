@@ -65,9 +65,9 @@ const ServicesWrapper = (props) => {
       maxW="md"
       mx="auto"
       bg={mode('white', 'gray.700')}
-      px="20"
-      pt="10"
-      pb="10"
+      px="10"
+      pt="8"
+      pb="8"
       rounded="lg"
       shadow="base"
       position="relative"
@@ -89,11 +89,11 @@ export const ServicesCard = (props) => {
         <Image src={img} alt={name} w="30%" h="30%" objectFit="cover" />
       </Center>
 
-      <Flex direction="column" justify="center">
-        <Text color={'#000'} fontFamily='Montserrat' align="center" fontSize="2xl" fontWeight="bold">
+      <Flex direction="column" justify="center" mt={4} textAlign="center">
+        <Text color={'#000'} fontFamily='Montserrat' fontSize="2xl" fontWeight="bold">
           {name}
         </Text>
-        <Text fontFamily='Montserrat' align="center" mt="4" color={'#000'} maxW="16rem" mx="auto">
+        <Text fontFamily='Montserrat' mt={2} color={'#000'} maxW="20rem" mx="auto">
           {description}
         </Text>
       </Flex>
