@@ -3,7 +3,7 @@ import { App as Logos } from "@/components/Logos/app"
 import { App as Services } from "@/components/Services/app"
 import { App as Projects } from "@/components/Projects/app"
 import { App as Hero } from "@/components/Hero/app"
-import { app as VideoProfile } from "@/components/Video_profile/app"
+import { app as WhoAre } from "@/components/WhoAre/app"
 import { App as Whyus } from "@/components/whyus/app"
 import { slides } from "@/components/Hero/slides/_dataHome"
 import { slides_pro } from "@/components/Projects/_data"
@@ -15,8 +15,7 @@ export default function Home() {
     <Box background="#000000">
       <Hero slides={slides}></Hero>
       {/* Video Profile */}
-      <VideoProfile></VideoProfile>
-      <Logos></Logos>
+      <WhoAre></WhoAre>
       <Container maxW='70vw' >
         <Box mt={30} width='70vw'>
           {/* Our Services */}

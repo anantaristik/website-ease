@@ -1,10 +1,46 @@
 import { Container, Box, Heading, Show, Text, Center, Divider, Icon, Image, HStack, Stack, FormControl, FormLabel, Input, PasswordField, Button } from "@chakra-ui/react"
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { useState, useRef, useEffect } from "react";
+import { Link, animateScroll as scroll, Events, scroller } from "react-scroll";
+import styles from "../styles/Contact.module.css";
 
-export default function Contact() {
+const Contact = () => {
+  const [isInViewport, setIsInViewport] = useState(false);
+  const imageRef = useRef();
+
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function (to, element) {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function (to, element) {
+      console.log("end", arguments);
+    });
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  const onScroll = () => {
+    const rect = imageRef.current.getBoundingClientRect();
+    if (rect.top < window.innerHeight / 2) {
+      setIsInViewport(true);
+    } else {
+      setIsInViewport(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
     <Box color='black'>
-      {/* Existing code */}
       <Box h='100vh' bg='white'>
         <Container>
           <Text pt='15vh' color='black' fontSize='3xl' fontWeight='extrabold'>We Want to Hear From You</Text>
@@ -44,21 +80,24 @@ export default function Contact() {
           </Box>
         </Container>
       </Box>
-      {/* New code */}
+
+      <Box ref={imageRef} className={`${styles.imageContainer}`}>
       <Box
-        h='100vh'
-        bgImage='/img/jakarta.jpeg'
-        bgSize='cover'
-        bgPosition='center'
-        bgRepeat='no-repeat'
-        display='flex'
-        justifyContent='center'
-        alignItems='center'
-      >
-        <Text color='white' fontSize='4xl' fontWeight='extrabold' textAlign='center'>
+        className={`${styles.image} ${isInViewport ? styles.visible : ""}`}
+        style={{
+          backgroundImage: "url(/img/jakarta.jpeg)",
+        }}
+      ></Box>
+      <Box className={styles.textContainer}>
+        <Text color="white" fontSize="4xl" fontWeight="extrabold" textAlign="center">
           Welcome to Our Website
         </Text>
       </Box>
     </Box>
-  )
-}
+    </Box>
+  );
+
+};
+
+
+export default Contact;

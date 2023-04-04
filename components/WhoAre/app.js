@@ -6,23 +6,6 @@ export const app = (params) => {
         <Box backgroundSize={"cover"} backgroundImage='img/yellow.png'>
             <Container maxW='70vw' color='black' pt={70} pb={70}>
                 <HeadingVidprof type={params.type}></HeadingVidprof>
-                <Center>
-                <Box
-                    width='50vw'
-                    as='video'
-                    controls
-                    src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'
-                    poster='https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'
-                    alt='Big Buck Bunny'
-                    objectFit='contain'
-                    sx={{
-                    aspectRatio: '16/9'
-                    }}
-                    mt={45}
-                    borderRadius={25}
-                    boxShadow='10px 10px 10px 2px rgba(0, 0, 0, 0.2)'
-                />
-                </Center>
                 <Box fontSize={'20px'} fontFamily="Montserrat" textAlign="center" mt={10}>
                     <Text as="span" fontWeight="bold">
                         EASE YOUR NEEDS
@@ -36,7 +19,6 @@ export const app = (params) => {
                     creative and agile people and ready to maximize your events and brands’
                     potentials to the fullest.
                 </Box>
-
             </Container>
         </Box>
     )

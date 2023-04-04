@@ -2,7 +2,8 @@ import {
   Box,
   createIcon,
   Flex,
-  List,
+  Image,
+  Center,
   ListItem,
   Text,
   useColorModeValue as mode,
@@ -77,27 +78,25 @@ const ServicesWrapper = (props) => {
 }
 
 export const ServicesCard = (props) => {
-  const { scale = 1, onClick, features, name, description, price, popular, ...rest } = props
+  const { img, scale = 1, onClick, name, description, price, popular, ...rest } = props
   return (
   
-    <ServicesWrapper highlight={popular} {...rest} style={{ transform: `scale(${scale})` }}>
+    <ServicesWrapper backgroundColor={'white'} highlight={popular} {...rest} style={{ transform: `scale(${scale})` }}>
 
       {popular && <PopularBadge>Most Popular</PopularBadge>}
 
+      <Center>
+        <Image src={img} alt={name} w="30%" h="30%" objectFit="cover" />
+      </Center>
+
       <Flex direction="column" justify="center">
-        <Text align="center" fontSize="3xl" fontWeight="bold">
+        <Text color={'#000'} fontFamily='Montserrat' align="center" fontSize="2xl" fontWeight="bold">
           {name}
         </Text>
-        <Text align="center" mt="4" color={mode('gray.600', 'gray.400')} maxW="16rem" mx="auto">
+        <Text fontFamily='Montserrat' align="center" mt="4" color={'#000'} maxW="16rem" mx="auto">
           {description}
         </Text>
       </Flex>
-
-      <List stylePosition="outside" mt="8" spacing={4}>
-        {features.map((feature, idx) => (
-          <ServicesDetail key={idx}>{feature}</ServicesDetail>
-        ))}
-      </List>
 
     </ServicesWrapper>
 

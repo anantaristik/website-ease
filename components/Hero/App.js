@@ -53,9 +53,6 @@ export const App = (props) => {
         w="full"
         h="100vh"
         bg="#edf3f8"
-        _dark={{
-          bg: "#3e3e3e",
-        }}
         alignItems="center"
         justifyContent="center"
       >
@@ -90,10 +87,11 @@ export const App = (props) => {
                   spacing={0}
                 >
                   <Text fontSize="6vw" fontWeight="extrabold" as='u'>{slide.label}</Text>
-                  <HStack spacing='2vw'>
+                  <HStack spacing='3vw'>
                     <VStack align='left' spacing={0}>
                       <Text fontSize="xl" >{slide.subheading1}</Text>
                       <Text fontSize="xl" >{slide.subheading2}</Text>
+                      <Text fontSize="xl" >{slide.subheading3}</Text>
                     </VStack>
                     <Button>Learn More...</Button>
                   </HStack>
