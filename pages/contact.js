@@ -85,7 +85,7 @@ const Contact = () => {
       <Box
         className={`${styles.image} ${isInViewport ? styles.visible : ""}`}
         style={{
-          backgroundImage: "url(/img/jakarta.jpeg)",
+          backgroundImage: "url(/img/jakarta.png)",
         }}
       ></Box>
       <Box className={styles.textContainer}>

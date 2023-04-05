@@ -19,11 +19,16 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            <span className={styles.logoText}>Logo</span>
+            <img className={styles.logoImage} src="/img/easelogo/whitetrans.png" alt="Logo" />
           </Link>
         </div>
         <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.navList}>
+          <li>
+              <Link href="/">
+                <span>Home</span>
+              </Link>
+            </li>
             <li>
               <Link href="/about">
                 <span>About</span>
@@ -39,15 +44,20 @@ const Navbar = () => {
                 }`}
               >
                 <Link href="/services/creative">
-                  <span>Service 1</span>
+                  <span>Creative</span>
                 </Link>
                 <Link href="/services/studio">
-                  <span>Service 2</span>
+                  <span>Studio</span>
                 </Link>
                 <Link href="/services/zoom">
-                  <span>Service 3</span>
+                  <span>Zoom</span>
                 </Link>
               </div>
+            </li>
+            <li>
+              <Link href="/project">
+                <span>Projects</span>
+              </Link>
             </li>
             <li>
               <Link href="/contact">

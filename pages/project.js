@@ -82,13 +82,13 @@ const CardGrid = () => {
   const cardData = [
     { img: 'img/jakarta2.jpeg', title: 'Judul 1' },
     { img: 'img/jakarta.png', title: 'Judul 2' },
-    { img: 'img/jakarta2.jpeg', title: 'Judul 1' },
-    { img: 'img/jakarta.png', title: 'Judul 2' },
-    { img: 'img/jakarta2.jpeg', title: 'Judul 1' },
-    { img: 'img/jakarta.png', title: 'Judul 2' },
-    { img: 'img/jakarta2.jpeg', title: 'Judul 1' },
-    { img: 'img/jakarta.png', title: 'Judul 2' },
-    { img: 'img/jakarta.png', title: 'Judul 2' },
+    { img: 'img/jakarta2.jpeg', title: 'Judul 3' },
+    { img: 'img/jakarta.png', title: 'Judul 4' },
+    { img: 'img/jakarta2.jpeg', title: 'Judul 5' },
+    { img: 'img/jakarta.png', title: 'Judul 6' },
+    { img: 'img/jakarta2.jpeg', title: 'Judul 7' },
+    { img: 'img/jakarta.png', title: 'Judul 8' },
+    { img: 'img/jakarta.png', title: 'Judul 9' },
   ];
 
   return (
