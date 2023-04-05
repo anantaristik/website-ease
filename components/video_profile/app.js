@@ -1,7 +1,7 @@
 import { Box, Center, Text, Container } from "@chakra-ui/react"
 import { HeadingVidprof } from "./heading"
 
-export const app = (params) => {
+export const App = (params) => {
     return(
         <Box backgroundSize={"cover"} backgroundImage='img/blackcreative.png'>
             <Container maxW='70vw' color='#f2f2f2' pt={70} pb={70}>

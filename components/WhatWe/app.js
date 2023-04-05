@@ -1,7 +1,7 @@
 import { Box, Center, Text, Container } from "@chakra-ui/react"
 import { HeadingWhatWe } from "./heading"
 
-export const app = (params) => {
+export const App = (params) => {
     const type = params.type
     
     return(

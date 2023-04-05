@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react"
 
-export const app = () => {
+export const App = () => {
     return (
         <Box fontFamily={'Montserrat'} mb={40}>
             <Heading >Vision</Heading>

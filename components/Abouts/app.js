@@ -1,7 +1,7 @@
-import { Box, Center, Text, Container } from "@chakra-ui/react"
+import { Box, Text, Container } from "@chakra-ui/react"
 import { HeadingAbout } from "./heading"
 
-export const app = (params) => {
+export const App = (params) => {
     return(
         <Box backgroundSize={"cover"} backgroundColor={'#f2f2f2f2'}>
             <Container maxW='70vw' color='black' pt={200} pb={70}>

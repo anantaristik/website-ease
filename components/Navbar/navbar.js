@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from './navbar.module.css';
 
 const Navbar = () => {
@@ -19,7 +20,13 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            <img className={styles.logoImage} src="/img/easelogo/whitetrans.png" alt="Logo" />
+          <Image
+              src="/img/easelogo/whitetrans.png" // Replace with your logo image path
+              alt="Logo"
+              width={80}
+              height={40}
+              className={styles.logoImage}
+            />
           </Link>
         </div>
         <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>

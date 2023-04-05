@@ -2,13 +2,13 @@ import React from 'react';
 import { Box, Container } from "@chakra-ui/react"
 import { App as Hero } from "@/components/Hero/app"
 import { slides } from "@/components/Hero/slides/_dataAbout"
-import { app as VideoProfile} from "@/components/Video_profile/app"
-import { app as Abouts } from "@/components/About/app"
-import { app as WhoAre } from "@/components/WhoAre/app"
-import { app as WhatWe } from "@/components/WhatWe/app"
+import { App as VideoProfile} from "@/components/Video_profile/app"
+import { App as Abouts } from "@/components/Abouts/app"
+import { App as WhoAre } from "@/components/WhoAre/app"
+import { App as WhatWe } from "@/components/WhatWe/app"
 import { App as History } from "@/components/History/app"
 import { App as OurValues } from "@/components/OurValues/app"
-import { app as Misvis} from "@/components/misvis/app"
+import { App as Misvis} from "@/components/misvis/app"
 import { App as Teams } from "@/components/teams/app"
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
   }, []);
 
   const navbarHeight = 1;
-  const heroHeight = 600;
+  const heroHeight = 500;
 
   return (
     <Box position="relative" color="black" background="#f2f2f2" minHeight="100vh">
@@ -58,7 +58,6 @@ export default function About() {
 
         <Container maxW='70vw' pb='9vh'>
           <Box mt={50} width='70vw'>
-            {/* Mission and Vision */}
             <Box>
             <Misvis></Misvis>
             </Box>
